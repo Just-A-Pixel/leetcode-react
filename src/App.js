@@ -31,15 +31,11 @@ function App() {
             if (
                 length === 4 &&
                 e.nativeEvent.inputType !== "deleteContentBackward" &&
-                cursor === 4
+                cursor !== 1
             ) {
                 setCursor(7);
-            } else if (
-              e.nativeEvent.inputType !== "deleteContentBackward" &&
-              cursor === 1
-            ) {
-              setCursor(2)
-            }
+            } 
+            
         } else if (length === 3 &&
           e.nativeEvent.inputType === "deleteContentBackward" && cursor <= 7 && e.target.selectionStart === 3) {
             setCursor(2);
